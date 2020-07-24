@@ -1,0 +1,67 @@
+/* Author: Yin Dong
+
+Date: July 12, 2020
+
+Course module: CPRG 210
+
+Assignment: Assignment #2  */
+
+
+/* Import our font */
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:700i|Fira+Sans");
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Raleway:wght@300;400&display=swap');
+
+body {
+
+  font-family: 'Cormorant Garamond', serif;
+
+}
+
+.logo a {
+  font-size: 3em;
+  color: rebeccapurple;
+  text-decoration: none;
+}
+
+.menu {
+  font-size: 1.5em;
+}
+
+header h2 {
+  font-size: 4em;
+  color: white;
+}
+
+header h1 {
+  font-size: 5em;
+  color: white;
+}
+
+.wrapper {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+}
+
+.btn-register,
+.btn-gallery {
+  font-size: 2em;
+}
+
+.form h1,
+#gallery {
+  font-size: 4em;
+  color: rebeccapurple;
+  background-image: linear-gradient(pink, lightblue);
+}
+
+h3 {
+  color: rebeccapurple;
+}
+
+.btn {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+footer {
+  font-size: 1.5em;
+}

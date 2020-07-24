@@ -1,0 +1,98 @@
+<!-- Author: Yin Dong
+
+Date: July 12, 2020
+
+Course module: CPRG 210
+
+Assignment: Assignment #2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent</title>
+    <%- include('./partials/css-global'); %>
+</head>
+
+<body>
+
+    <div class="footer-wrapper">
+        <!-- navigation bar section -->
+        <!-- navigation bar has two section: logo and menu -->
+        <nav>
+            <div class="nav-bar">
+                <div class="logo"><a href="/"><i class="fas fa-road"></i><strong>Travel Expert</strong></a>
+                </div>
+                <div class="menu">
+                    <button class="btn-navi">Menu Toggle</button>
+                    <ul class="visible">
+                        <li><a href="/" class="current">Home</a></li>
+                        <li><a href="/#gallery">Destination</a></li>
+                        <li><a href="/#contact-us">Contact Us</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li class="wide"><a href="/register">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- hero section -->
+        <%- include('./partials/header'); %>
+
+
+
+        <!-- <header>
+            <div class="hero-section">
+                <h2>Bring your mood</h2>
+                <h1>Come travel with us...</h1>
+                <a href="register.html" class="btn-register">Sign Up</a>
+                <a href="index.html#gallery" class="btn-gallery">Gallery</a>
+            </div>
+        </header> -->
+
+        <!-- contact Us form -->
+        <main>
+            <form action="#" method="post" class="contactus-form center form">
+                <fieldset id="contact-us">
+                    <h1>Contact Us</h1>
+                    <div class="wrapper">
+                        <div>
+                            <label for="username">Full Name</label>
+                            <input type="text" name="username" id="username" placeholder="Please enter your name"
+                                required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Please enter your email" required>
+                        </div>
+                        <div>
+                            <label for="phonenumber">Phone Number</label>
+                            <input type="text" name="phonenumber" id="phonenumber"
+                                placeholder="Please enter your phone number" required>
+                        </div>
+                        <div>
+                            <label for="message">Message</label>
+                            <input type="text" name="message" id="message" placeholder="Please enter your request"
+                                required>
+                        </div>
+                    </div>
+                    <button class="btn" type="submit">SEND</button>
+                </fieldset>
+            </form>
+
+            <!-- Gallery section -->
+            <h1 id="gallery">Gallery</h1>
+            <div class="gallery-section"> </div>
+        </main>
+
+        <%- include('./partials/footer'); %>
+        <%- include('./partials/js-gallery'); %>
+        <%- include('./partials/js-menu-toggle'); %>
+        <%- include('./partials/logo-icon'); %>
+
+    </div>
+</body>
+
+</html>

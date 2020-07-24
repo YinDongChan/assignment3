@@ -1,0 +1,77 @@
+<!-- Author: Yin Dong
+
+Date: July 12, 2020
+
+Course module: CPRG 210
+
+Assignment: Assignment #2 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('./partials/css-global'); %>
+  <title>Travel Agent</title>
+</head>
+
+<body>
+  <!-- navigation bar section -->
+  <div class="footer-wrapper">
+    <nav>
+      <div class="nav-bar">
+        <div class="logo"><a href="/"><i class="fas fa-road"></i><strong>Travel Expert</strong></a></div>
+        <div class="menu">
+          <button class="btn-navi">Menu Toggle</button>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#gallery">Destination</a></li>
+            <li><a href="/#contact-us">Contact Us</a></li>
+            <li><a href="/login">Login</a></li>
+            <li class="wide"><a href="/register" class="current">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- create sign up form -->
+    <main>
+      <form action="#" method="post" class="registration-form center form">
+        <fieldset>
+          <h1>Sign Up</h1>
+          <div class="wrapper">
+            <div>
+              <label for="username">Full Name</label>
+              <input type="text" name="username" id="username" placeholder="Full name" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Please enter your email" required>
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Please create a password" minlength="8"
+                required>
+            </div>
+            <div>
+              <label for="confirm">Confirm Password</label>
+              <input type="password" name="confirm" id="confirm" placeholder="Please confirm your password" required>
+            </div>
+          </div>
+          <button class="btn" type="submit">Subscribe to Newsletter</button>
+          <h3>Don't have an Account with us? SIGN UP now!</h3>
+        </fieldset>
+      </form>
+    </main>
+
+    <%- include('./partials/footer'); %>
+    <%- include('./partials/logo-icon'); %>
+
+
+
+  </div>
+</body>
+
+</html>

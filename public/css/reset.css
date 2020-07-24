@@ -1,0 +1,23 @@
+/* Author: Yin Dong
+
+Date: July 12, 2020
+
+Course module: CPRG 210
+
+Assignment: Assignment #2  */
+
+
+/* Resets */
+
+  body {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .logo a{
+    text-decoration: none;
+  }

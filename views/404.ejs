@@ -1,0 +1,50 @@
+<!-- Author: Yin Dong
+
+Date: July 12, 2020
+
+Course module: CPRG 210
+
+Assignment: Assignment #2 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('./partials/css-global'); %>
+  <title>Travel Agent</title>
+</head>
+
+<body>
+  <!-- navigation bar section -->
+  <!-- navigation bar has two section: logo and menu -->
+  <div class="footer-wrapper">
+    <nav>
+      <div class="nav-bar">
+        <div class="logo"><a href="/"><i class="fas fa-road"></i><strong>Travel Expert</strong></a></div>
+        <div class="menu">
+          <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/#gallery">Destination</a></li>
+            <li><a href="/#contact-us">Contact Us</a></li>
+            <li><a href="/login" class="current">Login</a></li>
+            <li class="wide"><a href="/register">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="a-404 center">
+      <h1>404: File Not Found</h1>
+      <img src="https://picsum.photos/id/237/600/200" alt="cute little puppy">
+    </div>
+    <%- include('./partials/footer'); %>
+    <%- include('./partials/logo-icon'); %>
+
+  </div>
+</body>
+
+</html>
