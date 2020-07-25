@@ -4,10 +4,7 @@
 
 // Course module: CPRG 210
 
-// Assignment: Assignment #2
-
-
-// Menu Toggle button on home page
+// Assignment: Assignment #3
 
 // fetch('http://localhost:3000/api/destinations')
 fetch('https://assignment3-travel-expert.herokuapp.com/api/destinations')

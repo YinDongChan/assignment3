@@ -1,10 +1,10 @@
-/* Author: Yin Dong
+// Author: Yin Dong
 
-Date: July 12, 2020
+// Date: July 12, 2020
 
-Course module: CPRG 210
+// Course module: CPRG 210
 
-Assignment: Assignment #3  */
+// Assignment: Assignment #3
 
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');

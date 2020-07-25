@@ -4,7 +4,7 @@
 
 // Course module: CPRG 210
 
-// Assignment: Assignment #2
+// Assignment: Assignment #3
 
 
 // Menu Toggle button on home page
