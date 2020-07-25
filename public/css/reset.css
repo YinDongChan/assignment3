@@ -11,6 +11,7 @@ Assignment: Assignment #2  */
 
   body {
     margin: 0;
+    /* background-image: linear-gradient(90deg, pink, lightblue); */
   }
   
   nav ul {
@@ -21,3 +22,5 @@ Assignment: Assignment #2  */
   .logo a{
     text-decoration: none;
   }
+
+

@@ -4,7 +4,7 @@ Date: July 12, 2020
 
 Course module: CPRG 210
 
-Assignment: Assignment #2 -->
+Assignment: Assignment #3 -->
 
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ Assignment: Assignment #2 -->
   <title>Travel Agent</title>
 </head>
 
-<body>
+<body class="login-page">
   <!-- navigation bar section -->
   <!-- navigation bar has two section: logo and menu -->
   <div class="footer-wrapper">
@@ -26,7 +26,7 @@ Assignment: Assignment #2 -->
         <div class="logo"><a href="/"><i class="fas fa-road"></i><strong>Travel Expert</strong></a></div>
         <div class="menu">
           <ul>
-            <li><a href="/index">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/#gallery">Destination</a></li>
             <li><a href="/#contact-us">Contact Us</a></li>
             <li><a href="/login" class="current">Login</a></li>
@@ -59,6 +59,8 @@ Assignment: Assignment #2 -->
     </main>
 
     <%- include('./partials/footer'); %>
+    <%- include('./partials/js-gallery'); %>
+    <%- include('./partials/js-menu-toggle'); %>
     <%- include('./partials/logo-icon'); %>
 
   </div>

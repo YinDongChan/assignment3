@@ -1,9 +1,18 @@
+// Author: Yin Dong
+
+// Date: July 12, 2020
+
+// Course module: CPRG 210
+
+// Assignment: Assignment #3
+
 // import modules
 const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const moment = require("moment");
+const destinations = require('./seeds/destinations');
 
 // Models
 const Destination = require('./models/gallery.js');
@@ -59,7 +68,7 @@ app.get('/api/destinations', function (request, response) {
     response.json(destinations);
   });
 })
-
+console.log()
 // Display an individual animal page when someone browses to an ID
 // https://expressjs.com/en/api.html#req.params
 app.get('/:id', function (request, response) {
@@ -93,3 +102,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);
 });
+
+app.local.moment = moment;
