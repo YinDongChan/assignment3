@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+const moment = require("moment");
 
 // Models
 const Destination = require('./models/gallery.js');
@@ -51,15 +52,35 @@ app.get('/login', function (request, response) {
   response.render('login', {});
 })
 
-
 // Create a JSON (no EJS here) that returns the entire animal JSON
 // This is the endpoint that the frontend gallery script calls (see: ./public/js/app.js).
 app.get('/api/destinations', function (request, response) {
   Destination.find(function (error, destinations) {
     response.json(destinations);
   });
-
 })
+
+// Display an individual animal page when someone browses to an ID
+// https://expressjs.com/en/api.html#req.params
+app.get('/:id', function (request, response) {
+
+  // Find the specific animal in our module using array.find()
+  // https://stackoverflow.com/questions/7364150/find-object-by-id-in-an-array-of-javascript-objects
+  const destination = destinations.find(function (item) {
+
+    return item.id === parseInt(request.params.id);
+
+  });
+
+  // Check for IDs that are not in our list
+  if (!destination) {
+    return response.send('Invalid ID.');
+  }
+
+  // We now pass our animal object into our view (the 2nd object must be an object)
+  response.render('destination-single', destination);
+})
+
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function (req, res, next) {
   res.status(404);

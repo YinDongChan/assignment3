@@ -9,7 +9,8 @@
 
 // Menu Toggle button on home page
 
-fetch('http://localhost:3000/api/destinations')
+// fetch('http://localhost:3000/api/destinations')
+fetch('https://assignment3-travel-expert.herokuapp.com/api/destinations')
   .then(function (response) {
     return response.json();
   })
