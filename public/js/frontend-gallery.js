@@ -23,8 +23,7 @@ fetch('https://assignment3-travel-expert.herokuapp.com/api/destinations')
     imgList.forEach(function (item) {
       imgTemplate +=
         `<figure>
-        // <a href="https://assignment3-travel-expert.herokuapp.com/${item.id}">
-        <a href="http://localhost:3000/${item.id}">
+        <a href="/${item.id}">
           <img src="https://picsum.photos/id/${item.id}/250" alt="${item.fileName}">
         </a>
         
@@ -36,4 +35,3 @@ fetch('https://assignment3-travel-expert.herokuapp.com/api/destinations')
     gallery.innerHTML = imgTemplate;
 
   });
-
