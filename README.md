@@ -7,7 +7,7 @@ Date: July 26, 2020
 
 Course module: CPRG 210
 
-Assignment: Assignment #2 
+Assignment: Assignment #3 
 
 
 ##Attributes:
@@ -38,4 +38,8 @@ Assignment: Assignment #2
 
 7. Sticky footer section used Tony Grimes class sample code : Sticky-footer
 
-8. Help from classmate Ying Jin and friend Yang Wang
+8. MongoDB and heroku set up used Tony Grimes code: 5-animal-mongoose and 6-animal-heroku-atlas
+
+9. Moment model learned from friend Yang Li
+
+10. Help from classmate Patrick Peng, Ying Jin and friend Yang Wang
