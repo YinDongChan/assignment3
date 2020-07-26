@@ -78,10 +78,12 @@ console.log()
 // Define an endpoint handler for the individual destination pages
 app.get('/:id', function (request, response) {
   Destination.findOne({ 'id': request.params.id }, function (error, destination) {
+
+    console.log('destination-single');
+
     // Check for IDs that are not in our list
     if (!destination) {
       return response.render('404', {});
-      c
     }
     // Compile view and respond
     response.render('destination-single', destination);
@@ -96,9 +98,9 @@ app.use(function (req, res, next) {
 });
 
 // start up server
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, function () {
-  console.log(`Listening on port ${PORT}`);
-});
+// app.listen(PORT, function () {
+//   console.log(`Listening on port ${PORT}`);
+// });
 
