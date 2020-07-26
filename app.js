@@ -40,7 +40,7 @@ db.once('open', function () {
 const app = express();
 app.set('view engine', 'ejs');
 
-// app.locals.moment = moment;
+app.locals.moment = moment;
 
 
 // automatically check if requested file is found in /public
@@ -86,7 +86,7 @@ app.get('/:id', function (request, response) {
 
   // Check for IDs that are not in our list
   if (!destination) {
-    return response.send('Invalid ID.');
+    return response.render('404', {});
   }
 
   // We now pass our animal object into our view (the 2nd object must be an object)
