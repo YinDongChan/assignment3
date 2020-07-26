@@ -40,6 +40,9 @@ db.once('open', function () {
 const app = express();
 app.set('view engine', 'ejs');
 
+// app.locals.moment = moment;
+
+
 // automatically check if requested file is found in /public
 // if yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
@@ -103,4 +106,3 @@ app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}`);
 });
 
-app.local.moment = moment;
