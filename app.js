@@ -71,7 +71,7 @@ app.get('/api/destinations', function (request, response) {
     response.json(destinations);
   });
 })
-console.log()
+// console.log()
 // Display an individual animal page when someone browses to an ID
 // https://expressjs.com/en/api.html#req.params
 
@@ -79,7 +79,7 @@ console.log()
 app.get('/:id', function (request, response) {
   Destination.findOne({ 'id': request.params.id }, function (error, destination) {
 
-    console.log('destination-single');
+    // console.log('destination-single');
 
     // Check for IDs that are not in our list
     if (!destination) {
@@ -98,9 +98,9 @@ app.use(function (req, res, next) {
 });
 
 // start up server
-// const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-// app.listen(PORT, function () {
-//   console.log(`Listening on port ${PORT}`);
-// });
+app.listen(PORT, function () {
+  console.log(`Listening on port ${PORT}`);
+});
 
