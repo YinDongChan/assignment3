@@ -74,24 +74,20 @@ app.get('/api/destinations', function (request, response) {
 console.log()
 // Display an individual animal page when someone browses to an ID
 // https://expressjs.com/en/api.html#req.params
+
+// Define an endpoint handler for the individual destination pages
 app.get('/:id', function (request, response) {
-
-  // Find the specific animal in our module using array.find()
-  // https://stackoverflow.com/questions/7364150/find-object-by-id-in-an-array-of-javascript-objects
-  const destination = destinations.find(function (item) {
-
-    return item.id === parseInt(request.params.id);
-
+  Destination.findOne({ 'id': request.params.id }, function (error, destination) {
+    // Check for IDs that are not in our list
+    if (!destination) {
+      return response.render('404', {});
+      c
+    }
+    // Compile view and respond
+    response.render('destination-single', destination);
   });
-
-  // Check for IDs that are not in our list
-  if (!destination) {
-    return response.render('404', {});
-  }
-
-  // We now pass our animal object into our view (the 2nd object must be an object)
-  response.render('destination-single', destination);
 })
+
 
 // if no file or endpoint found, send a 404 error as a response to the browser
 app.use(function (req, res, next) {
