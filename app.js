@@ -12,7 +12,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const moment = require("moment");
-const destinations = require('./seeds/destinations');
 
 // Models
 const Destination = require('./models/gallery.js');
